@@ -1,0 +1,159 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: #18161f;
+  /* padding: 5px; */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f324e;
+  width: 100%;
+}
+h1 {
+  font-size: 2.5rem;
+  color: black;
+  margin: 0 0.5rem 0;
+}
+
+h1::after {
+  content: "gator";
+  color: crimson;
+}
+header img {
+  height: 50px;
+  margin-right: 2rem;
+  width: 50px;
+}
+
+form {
+  margin: 1.3rem 0.5rem 1rem 4rem;
+  width: 30%;
+}
+
+input {
+  height: 2rem;
+  background-color: transparent;
+  border: #535891 2px solid;
+  border-radius: 15px;
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+  padding: 23px 20px 20px 20px;
+  /* margin: 1rem; */
+}
+
+input:focus {
+  outline: none;
+  background-color: #231f30;
+}
+input::placeholder {
+  color: #535891;
+  font-size: 1.1rem;
+}
+
+header button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0 0;
+  color: #ddd;
+}
+
+.list {
+  display: flex;
+  padding: 1rem;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.list h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #ccc;
+  width: 50%;
+  margin: 8rem auto;
+}
+
+.movie-card {
+  transition: ease 0.15s;
+  background-color: #373b69;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 8px 2px rgb(72, 55, 94);
+  margin: 1.4rem;
+  position: relative;
+  width: 300px;
+}
+
+.movie-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1rem 0.7rem 1rem;
+  /* height: fit-content; */
+  align-items: center;
+  line-height: 1.2;
+  color: #ddd;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  font-weight: 600;
+}
+
+.movie-info span {
+  background-color: #494f8a;
+  min-width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgb(148, 131, 155);
+  padding: 0.4rem 0.6rem;
+}
+
+.fas.fa-star {
+  color: rgb(235, 228, 129);
+}
+
+.overview {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  margin-top: 1rem;
+  overflow: auto;
+  opacity: 0;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  max-height: 425px;
+  background-color: rgba(44, 48, 53, 0.308);
+  border-radius: 5px;
+  transform: translateY(100%);
+  transition: 0.4s ease-in;
+}
+
+.movie-card:hover .overview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
